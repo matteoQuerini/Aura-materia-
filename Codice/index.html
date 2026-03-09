@@ -1,52 +1,44 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Aura Materia</title>
 </head>
-
 <body>
+    <header>
+        <div>
+            <img src="../img/logo.png" alt="logo">
+            <h1>Aura Materia</h1>
+        </div>
+        <hr>
+    </header>
+
     <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="video.mp4" type="video/mp4">
+        <video autoplay muted playsinline id="bg-video">
+            <source src="../img/video.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
         </video>
     </div>
 
-    <header>
+    <div class="informazioni hidden-content">
+        <h2>Non arrediamo spazi, ma domiamo il riverbero della materia primordiale attraverso il rigore dell'alchimia.</h2>
         <div>
-            <h1>Aura Materia</h1>
-            <p>L'anima della materia, il rigore del design</p>
-        </div>
-
-        <hr>
-
-        <div class="menu">
-            <a href="">le nostre opere</a>
-            <a href="">nostri mobili</a>
-            <a href="">contattaci</a>
-            <a href="">la nostra storia</a>
-        </div>
-    </header>
-
-    <div class="informazioni">
-        <h2>Non arrediamo spazi, ma domiamo il riverbero della materia primordiale attraverso il rigore dell’alchimia.</h2>
-        <div>
-            <img alt="Venature di legno" src="legno1.jpg">
+            <img alt="Venature di legno" src="../img/legno1.jpg">
             <p>Non ci limitiamo a tagliare tronchi, ma sezioniamo con rispetto il silenzio di secoli per rivelare la
                 memoria organica impressa in ogni singola venatura. Ogni asse diventa così un archivio di vita, dove il
                 calore della fibra ancestrale incontra il rigore del design contemporaneo, trasformando la porosità
                 selvaggia della materia in una superficie vibrante che non chiede solo di essere guardata, ma di essere
                 ascoltata attraverso il tatto.</p>
         </div>
-
         <div>
-            <img alt="Filamenti di bronzo lavorato" src="bronzo1.jpg">
+            <img alt="Filamenti di bronzo lavorato" src="../img/bronzo1.jpg">
             <p>Plasmato dal riverbero del fuoco, il nostro bronzo si svela in una stratificazione di linee pure, dove
                 ogni riflesso è un dialogo tra la forza bruta del metallo e la precisione del gesto umano. Non è
                 semplice materia silente, ma un corpo vivo che vibra di calore ambrato, pronto a mutare pelle attraverso
@@ -54,27 +46,49 @@
         </div>
     </div>
 
-    <div class="formConsulenza">
+    <div class="formConsulenza hidden-content">
         <div class="informazioniForm">
             <h2>Il Privé</h2>
             <p>L'ACCESSO ALLA MATERIA È UN PRIVILEGIO RISERVATO A CHI NE COMPRENDE IL RIVERBERO. NON ACCETTIAMO COMMISSIONI, MA INIZIAMO DIALOGHI.</p>
         </div>
-
         <form method="post" action="#">
             <label for="nome">L'IDENTITA</label>
             <input type="text" id="nome" name="nome" placeholder="NOME" required>
-
             <label for="email">Il CONTATTO</label>
             <input type="email" name="email" placeholder="COORDINATA DIGITALE" required>
-
             <label for="visione">L'INTERNO</label>
-            <textarea name="visione" placeholder="DESCRIVA LA SUA VISIONE DELLA MATERIA..." rows="4"></textarea>
-
+            <textarea name="visione" id="visione" placeholder="DESCRIVA LA SUA VISIONE DELLA MATERIA..." rows="4"></textarea>
             <div class="bottoneAccesso">
                 <button type="submit">RICHIEDI L'ACCESSO</button>
             </div>
         </form>
     </div>
-</body>
 
+    <script>
+        const video = document.getElementById('bg-video');
+        const header = document.querySelector('header');
+        let triggered = false;
+
+        video.loop = false;
+
+        function triggerReveal() {
+            triggered = true;
+            header.classList.add('moved');
+            document.querySelectorAll('.hidden-content').forEach(el => el.classList.add('visible'));
+        }
+
+        video.addEventListener('ended', () => {
+            if (!triggered) triggerReveal();
+            video.loop = true;
+            video.play();
+        });
+
+        document.addEventListener('mousedown', (e) => {
+            if (e.button === 0 && !triggered) {
+                triggerReveal();
+                if (!video.ended) video.currentTime = video.duration;
+            }
+        });
+    </script>
+</body>
 </html>
