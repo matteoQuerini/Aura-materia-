@@ -1,0 +1,39 @@
+*{
+
+    margin: 0px;
+   
+}
+
+header div{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: goldenrod;
+    
+}
+
+header h1{
+
+    margin-top: 10px;
+    
+
+}
+
+header p{
+    
+    margin-top: 5px;
+    margin-bottom: 7px;
+
+}
+
+.menu{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.menu a{
+    
+}
