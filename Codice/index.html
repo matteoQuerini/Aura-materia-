@@ -1,94 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Aura Materia</title>
+    <title>Aura Materia - Sculture Contemporanea Luxury</title>
 </head>
 <body>
+
+    <div class="video-background">
+        <video autoplay muted playsinline loop id="bg-video">
+            <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video-B0y7VRiicmw2DW6BndZOuhQlOkM8Mh.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
     <header>
-        <div>
-            <img src="../img/logo.png" alt="logo">
+        <div class="header-brand">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-zTB11JXibZeHaE8HI6AK22TcLyTcbP.png" alt="Aura Materia logo">
             <h1>Aura Materia</h1>
         </div>
         <hr>
+        <nav class="menu">
+            <a href="#sezione-opere" class="nav-link">Le Opere</a>
+            <a href="#sezione-materiali" class="nav-link">I Materiali</a>
+            <a href="#sezione-processo" class="nav-link">Il Processo</a>
+            <a href="#sezione-prive" class="nav-link">Il Privé</a>
+        </nav>
     </header>
 
-    <div class="video-background">
-        <video autoplay muted playsinline id="bg-video">
-            <source src="../img/video.mp4" type="video/mp4">
-            Il tuo browser non supporta il tag video.
-        </video>
-    </div>
-
-    <div class="informazioni hidden-content">
-        <h2>Non arrediamo spazi, ma domiamo il riverbero della materia primordiale attraverso il rigore dell'alchimia.</h2>
-        <div>
-            <img alt="Venature di legno" src="../img/legno1.jpg">
-            <p>Non ci limitiamo a tagliare tronchi, ma sezioniamo con rispetto il silenzio di secoli per rivelare la
-                memoria organica impressa in ogni singola venatura. Ogni asse diventa così un archivio di vita, dove il
-                calore della fibra ancestrale incontra il rigore del design contemporaneo, trasformando la porosità
-                selvaggia della materia in una superficie vibrante che non chiede solo di essere guardata, ma di essere
-                ascoltata attraverso il tatto.</p>
-        </div>
-        <div>
-            <img alt="Filamenti di bronzo lavorato" src="../img/bronzo1.jpg">
-            <p>Plasmato dal riverbero del fuoco, il nostro bronzo si svela in una stratificazione di linee pure, dove
-                ogni riflesso è un dialogo tra la forza bruta del metallo e la precisione del gesto umano. Non è
-                semplice materia silente, ma un corpo vivo che vibra di calore ambrato, pronto a mutare pelle attraverso
-                l'ossidazione per raccontare il passaggio del tempo.</p>
-        </div>
-    </div>
-
-    <div class="formConsulenza hidden-content">
-        <div class="informazioniForm">
-            <h2>Il Privé</h2>
-            <p>L'ACCESSO ALLA MATERIA È UN PRIVILEGIO RISERVATO A CHI NE COMPRENDE IL RIVERBERO. NON ACCETTIAMO COMMISSIONI, MA INIZIAMO DIALOGHI.</p>
-        </div>
-        <form method="post" action="#">
-            <label for="nome">L'IDENTITA</label>
-            <input type="text" id="nome" name="nome" placeholder="NOME" required>
-            <label for="email">Il CONTATTO</label>
-            <input type="email" name="email" placeholder="COORDINATA DIGITALE" required>
-            <label for="visione">L'INTERNO</label>
-            <textarea name="visione" id="visione" placeholder="DESCRIVA LA SUA VISIONE DELLA MATERIA..." rows="4"></textarea>
-            <div class="bottoneAccesso">
-                <button type="submit">RICHIEDI L'ACCESSO</button>
+    <div class="site-body hidden-content">
+        <section class="manifesto-section reveal">
+            <div class="manifesto-overlay"></div>
+            <div class="manifesto-content">
+                <h2 class="manifesto-title">OLTRE L'ARREDO</h2>
+                <p class="manifesto-subtitle">Sculture di materia primordiale che trasformano spazi in templi dell'essenza.</p>
+                <p class="manifesto-text">Aura Materia non crea mobili. Evoca dialoghi tra il tempo geologico e il gesto contemporaneo. Ogni pezzo è un'ossidazione della memoria, una cristallizzazione del silenzio ancestrale.</p>
+                <div class="manifesto-divider"></div>
             </div>
-        </form>
+        </section>
+
+        <section class="materiale-section" id="sezione-materiali">
+            <div class="materiale-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/legno1-lHCprz3PXLZ3dUXxU7zEVamVpe9PWh.jpg" alt="Venature di legno ancestrale">
+                <div class="materiale-label">I · LEGNO</div>
+            </div>
+            <div class="materiale-testo">
+                <div class="testo-inner">
+                    <h3>La memoria della fibra</h3>
+                    <p>Non ci limitiamo a tagliare tronchi, ma sezioniamo con rispetto il silenzio di secoli per rivelare la memoria organica impressa in ogni singola venatura. Ogni asse diventa un archivio di vita, dove il calore della fibra ancestrale incontra il rigore del design contemporaneo.</p>
+                    <p>Le nostre legazioni selezionano solo esemplari che hanno attraversato almeno tre generazioni di tempo geologico. La patina non è un difetto—è una firma dell'eternità.</p>
+                    <ul class="materiale-lista">
+                        <li>Rovere affumicato</li>
+                        <li>Ulivo millenario</li>
+                        <li>Cedro dei templi antichi</li>
+                        <li>Palissandro sepolto</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="materiale-section invertita">
+            <div class="materiale-testo">
+                <div class="testo-inner">
+                    <h3>La vibrazione della lava</h3>
+                    <p>Plasmato dal riverbero del fuoco, il nostro bronzo si svela in una stratificazione di linee pure, dove ogni riflesso è un dialogo tra la forza bruta del metallo e la precisione del gesto umano. Un corpo vivo che vibra di calore ambrato.</p>
+                    <p>Fusa a temperature che ricordano il mantello terrestre, ogni patina racconta secoli di ossidazione accelerata, un processo che mimèsi la nobilitazione naturale del tempo.</p>
+                    <ul class="materiale-lista">
+                        <li>Bronzo senza piombo</li>
+                        <li>Patina naturale invecchiata</li>
+                        <li>Rifinitura manuale a fuoco</li>
+                        <li>Trattamento anti-corrosione primordiale</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="materiale-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bronzo1-S6sVRCWMcFK5S2GN1TZNIQlCaEvsUk.jpg" alt="Bronzo affumicato">
+                <div class="materiale-label">II · BRONZO</div>
+            </div>
+        </section>
+
+        <section class="materiale-section">
+            <div class="materiale-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7bd4eaf4-6762-481e-9f12-6f522f8282d2-jYANnNQzs91XAk7D9KmU2y64ft5QvO.jpg" alt="Pietra nera laccata">
+                <div class="materiale-label">III · PIETRA NERA</div>
+            </div>
+            <div class="materiale-testo">
+                <div class="testo-inner">
+                    <h3>Lo spessore dell'abisso</h3>
+                    <p>Estratta dalle profondità vulcaniche, la nostra pietra nera incarna l'assenza di luce, quel vuoto primordiale da cui emerge la coscienza della forma. Ogni venatura è una cicatrice del magma, ogni riflesso è un sussurro del tempo.</p>
+                    <p>Levigata manualmente per mesi, ciascuna superficie rivela stratificazioni di ossidiana e basalto, creando un'opacità che non assorbe la luce, ma la negozia con eleganza minerale.</p>
+                    <ul class="materiale-lista">
+                        <li>Basalto vulcanico puro</li>
+                        <li>Levigatura manuale 200 ore</li>
+                        <li>Finitura anti-riflesso naturale</li>
+                        <li>Impermeabile e senza trattamento chimico</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="citazione">
+            <blockquote>
+                Non arrediamo spazi.<br>
+                <em>Sculpiamo il silenzio della materia in epifania visibile.</em>
+            </blockquote>
+            <div class="citazione-linea"></div>
+        </section>
+
+        <section class="sezione-opere" id="sezione-opere">
+            <div class="opere-header">
+                <h2>Le Opere</h2>
+                <p>Installazioni che riconfigurano lo spazio attraverso la densità della materia.</p>
+            </div>
+            
+            <div class="opere-grid">
+                <article class="opera-card hover-lift">
+                    <div class="opera-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/stanza1-PbJ1OJOT4VT9tz4gLWeggssl5buK7Z.jpg" alt="Installazione Stanza Silenziosa">
+                    </div>
+                    <div class="opera-info">
+                        <h3>Stanza Silenziosa</h3>
+                        <p class="opera-anno">2024</p>
+                        <p class="opera-desc">Legno rovere affumicato, bronzo e pietra nera. Un'istallazione che trasforma lo spazio in meditazione sulla profondità del tempo.</p>
+                        <div class="opera-materiali">
+                            <span class="tag">Rovere Affumicato</span>
+                            <span class="tag">Bronzo</span>
+                            <span class="tag">Basalto</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="opera-card hover-lift">
+                    <div class="opera-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/legno1-lHCprz3PXLZ3dUXxU7zEVamVpe9PWh.jpg" alt="Installazione Genealogia Organica">
+                    </div>
+                    <div class="opera-info">
+                        <h3>Genealogia Organica</h3>
+                        <p class="opera-anno">2023</p>
+                        <p class="opera-desc">Tre tavoli in legno di dimensioni diverse, ognuno con la propria patina invecchiata. Una narrazione della stratificazione temporale.</p>
+                        <div class="opera-materiali">
+                            <span class="tag">Ulivo Millenario</span>
+                            <span class="tag">Finitura Naturale</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="opera-card hover-lift">
+                    <div class="opera-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bronzo1-S6sVRCWMcFK5S2GN1TZNIQlCaEvsUk.jpg" alt="Installazione Dialogo Metallico">
+                    </div>
+                    <div class="opera-info">
+                        <h3>Dialogo Metallico</h3>
+                        <p class="opera-anno">2024</p>
+                        <p class="opera-desc">Sculture in bronzo di varie altezze, disposte in sinfonia spaziale. Il suono della materia incarnato in forma visiva.</p>
+                        <div class="opera-materiali">
+                            <span class="tag">Bronzo Puro</span>
+                            <span class="tag">Patina Naturale</span>
+                            <span class="tag">Composizione</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="filosofia-section">
+            <div class="filosofia-container">
+                <h2>La Visione</h2>
+                <div class="filosofia-content">
+                    <div class="filosofia-column">
+                        <h3>Oltre il Tempo Lineare</h3>
+                        <p>Aura Materia nasce dal rifiuto della velocità. Nel mondo che accelera, noi ralentiamo. Ogni pezzo che realizziamo è un gesto di resistenza verso l'effimero, una dichiarazione di amore per la densità materiale.</p>
+                        <p>La nostra ricerca non è estetica. È ontologica. Chiediamo: come può la materia diventare vettore di significato? Come può il silenzio della pietra parlare più eloquentemente delle parole?</p>
+                    </div>
+                    <div class="filosofia-column">
+                        <h3>Il Gesto Come Signature</h3>
+                        <p>Ogni artigiano che entra nel nostro studio porta con sé decenni di esperienza. Le loro mani non sono strumenti, sono interpreti. La patina che emerge non è un accidente industriale—è il diario segreto di quel gesto unico.</p>
+                        <p>Non riproduciamo. Incarniamo. Per questo nessuna delle nostre opere è identica a un'altra, e per questo ogni commissione è una conversazione tra l'anima del cliente e la memoria della materia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="processo-section" id="sezione-processo">
+            <h2>Il Processo</h2>
+            <div class="processo-steps">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <h3>Selezione della Materia</h3>
+                    <p>Ricerca etnobotanica e geologica attraverso i fornitori più antichi del mondo. Solo materiali con storia verificata entrano nel nostro studio.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <h3>Dialogo Iniziale</h3>
+                    <p>Ascolto profondo della visione del cliente. Non vendiamo prodotti—costruiamo relazioni. Questo stadio può durare mesi.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <h3>Lavorazione Manuale</h3>
+                    <p>Ogni pezzo è scolpito, levigato, trattato dalle mani di artigiani che hanno dedicato la vita alla loro arte. Nessuna macchina industriale.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <h3>Invecchiamento Accelerato</h3>
+                    <p>Processi naturali che permettono ai materiali di sviluppare la loro patina nel modo più autentico possibile. Pazienza cristallizzata.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <h2>Voci della Materia</h2>
+            <div class="testimonial-grid">
+                <blockquote class="testimonial-card">
+                    <p>"Non avevo compreso che l'arredo potesse essere una filosofia finché non ho varcato la porta di Aura Materia. Ogni oggetto racconta una storia che mi appartiene."</p>
+                    <footer>— Marco V., Collezionista</footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"Il tavolo in ulivo millenario ha trasformato il nostro spazio in un tempio. I nostri figli lo guarderanno fra cinquant'anni con lo stesso stupore di oggi."</p>
+                    <footer>— Giuliana P., Architettura</footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"Commissione un'opera da Aura Materia significa firmare un contratto con l'eternità. Non ci sono scadenze, solo profondità."</p>
+                    <footer>— Federico M., Imprenditore</footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"Ogni volta che i miei ospiti domandano del tavolo, raccontiamo la storia della materia. Questo è lusso vero: significato che dura."</p>
+                    <footer>— Alessandra L., Curatrice d'Arte</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="citazione intermedia">
+            <blockquote>
+                La materia non serve lo spazio.<br>
+                <em>Lo consacra.</em>
+            </blockquote>
+        </section>
+
+        <section class="prive reveal" id="sezione-prive">
+            <div class="prive-header">
+                <h2>Il Privé</h2>
+                <p>L'accesso alla materia è un privilegio riservato<br>a chi ne comprende il valore del silenzio.</p>
+                <p class="prive-sub">Non accettiamo commissioni ordinarie. Iniziamo dialoghi con chi vede la materia come mezzo di consapevolezza.</p>
+            </div>
+            <form class="prive-form" id="contactForm" method="post" action="#">
+                <div class="campo">
+                    <label for="nome">CHI SEI</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome e cognome" required>
+                </div>
+                <div class="campo">
+                    <label for="email">COME TI RAGGIUNGIAMO</label>
+                    <input type="email" id="email" name="email" placeholder="La tua coordinata digitale" required>
+                </div>
+                <div class="campo">
+                    <label for="telefono">IL TUO NUMERO</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+39" />
+                </div>
+                <div class="campo">
+                    <label for="visione">LA TUA VISIONE</label>
+                    <textarea id="visione" name="visione" placeholder="Descrivi lo spazio che vuoi trasformare. Quale materia ti chiama? Quale storia intendi raccontare ai tuoi spazi?" rows="7"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Richiedi il Dialogo</span>
+                    <svg width="32" height="1" viewBox="0 0 32 1"><line x1="0" y1="0.5" x2="32" y2="0.5" stroke="currentColor"/></svg>
+                </button>
+                <p class="form-note">Risponderemo entro 7 giorni. Ogni parola merita attenzione.</p>
+            </form>
+        </section>
+
+        <footer class="footer-section">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Aura Materia</h3>
+                    <p>Scultura dello spazio<br>Materia primordiale</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contatti</h3>
+                    <p><a href="mailto:studio@auramateria.it">studio@auramateria.it</a></p>
+                    <p><a href="tel:+390212345678">+39 02 1234 5678</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Indirizzo</h3>
+                    <p>Milano<br>Su appuntamento</p>
+                </div>
+                <div class="footer-column social">
+                    <h3>Connessioni</h3>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Aura Materia &nbsp;·&nbsp; Ogni pezzo è un'opera unica e irripetibile</p>
+            </div>
+        </footer>
+
     </div>
 
-    <script>
-        const video = document.getElementById('bg-video');
-        const header = document.querySelector('header');
-        let triggered = false;
+    <script src="script.js"></script>
 
-        video.loop = false;
-
-        function triggerReveal() {
-            triggered = true;
-            header.classList.add('moved');
-            document.querySelectorAll('.hidden-content').forEach(el => el.classList.add('visible'));
-        }
-
-        video.addEventListener('ended', () => {
-            if (!triggered) triggerReveal();
-            video.loop = true;
-            video.play();
-        });
-
-        document.addEventListener('mousedown', (e) => {
-            if (e.button === 0 && !triggered) {
-                triggerReveal();
-                if (!video.ended) video.currentTime = video.duration;
-            }
-        });
-    </script>
 </body>
 </html>
